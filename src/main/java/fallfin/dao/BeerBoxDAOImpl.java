@@ -1,24 +1,25 @@
 package fallfin.dao;
 
 import fallfin.module.BeerBox;
+import fallfin.module.BeerItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BeerBoxDAO {
+public class BeerBoxDAOImpl {
 
-    private List<BeerBox> beersBox = new ArrayList();
+    private List<BeerItem> beers = new ArrayList();
 
     /* Busca todas las cervezas */
-    public List<BeerBox> findAll(){
-        return beersBox;
+    public List<BeerItem> findAll(){
+        return beers;
     }
 
     /* graba una cerveza */
-    public int save (BeerBox beerBox){
+    public int save (BeerItem beer){
         Integer id = findAll().size()+1;
-        beerBox.getBeerItem().setId(id);
-        beersBox.add(beerBox);
+        beer.setId(id);
+        beers.add(beer);
         return id;
     }
 
