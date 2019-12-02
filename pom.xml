@@ -55,7 +55,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>fallfin.BeerMain</mainClass>
+                    <mainClass>fallfin.BeersMain</mainClass>
                 </configuration>
 
             </plugin>
