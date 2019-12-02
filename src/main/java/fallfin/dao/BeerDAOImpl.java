@@ -6,7 +6,7 @@ import fallfin.module.BeerItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BeerBoxDAOImpl {
+public class BeerDAOImpl {
 
     private List<BeerItem> beers = new ArrayList();
 

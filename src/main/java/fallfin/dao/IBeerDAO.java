@@ -5,7 +5,7 @@ import fallfin.module.BeerBox;
 import java.util.List;
 
 /* Interfaz DAO */
-public interface IBeerBoxDAO {
+public interface IBeerDAO {
 
     List<BeerBox> findAll();
     int save (BeerBox beerBox);
