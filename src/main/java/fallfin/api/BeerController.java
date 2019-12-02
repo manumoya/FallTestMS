@@ -1,7 +1,9 @@
 package fallfin.api;
 
-import fallfin.dao.BeerDAOImpl;
+import fallfin.dao.BeerDAO;
 import fallfin.module.BeerItem;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +21,12 @@ public class BeerController {
 
     /* POST => Grabar cerveza */
     @PostMapping("/beers")
-    public BeerItem addBeers(@RequestBody BeerItem beer) {
+    public ResponseEntity<BeerItem> addBeers(@RequestBody BeerItem beer) {
 
-        BeerDAOImpl beerDao = new BeerDAOImpl();
-
-        int id = beerDao.save(beer);
+        int id = BeerDAO.save(beer);
         beer.setId(id);
-        return beer;
+        //return beer;
+        return new ResponseEntity<BeerItem>(beer, HttpStatus.CREATED);
 
     }
 

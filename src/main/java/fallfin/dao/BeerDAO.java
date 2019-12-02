@@ -6,7 +6,7 @@ import fallfin.module.BeerItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BeerDAOImpl {
+public class BeerDAOImpl implements IBeerDAO {
 
     private static List<BeerItem> beers = new ArrayList();
 
