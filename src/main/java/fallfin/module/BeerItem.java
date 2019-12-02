@@ -8,7 +8,13 @@ public class BeerItem {
     private Double price;
     private String currency;
 
-    public BeerItem(){
+    public BeerItem(Integer id, String name, String brewery, String country, Double price, String currency){
+        setId(id);
+        setName(name);
+        setBrewery(brewery);
+        setCountry(country);
+        setPrice(price);
+        setCurrency(currency);
     }
 
     public Integer getId() {
