@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BeerDAOImpl {
 
-    private List<BeerItem> beers = new ArrayList();
+    private static List<BeerItem> beers = new ArrayList();
 
     /* Busca todas las cervezas */
     public List<BeerItem> findAll(){

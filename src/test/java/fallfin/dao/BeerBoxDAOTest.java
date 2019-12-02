@@ -20,14 +20,15 @@ public class BeerBoxDAOTest {
     @Test
     public void save() {
 
-        BeerBox beerBox = new BeerBox(3000.00);
-        BeerItem beer = new BeerItem(0, "pilsen", "ARTOR", "Chile", 1000.00, "CLP", beerBox);
+        BeerItem beer = new BeerItem(0, "pilsen", "ARTOR", "Chile", 1000.00, "CLP");
+        BeerItem beer2 = new BeerItem(0, "pilsen2", "ARTOR2", "Chile2", 1000.00, "CLP");
 
         BeerDAOImpl beerDao = new BeerDAOImpl();
         beerDao.save(beer);
         List<BeerItem> beers = beerDao.findAll();
         assertEquals(1,beers.size());
-
+        beerDao.save(beer);
+        assertEquals(2,beers.size());
 
     }
 }

@@ -21,15 +21,12 @@ public class BeerController {
     @PostMapping("/beers")
     public BeerItem addBeers(@RequestBody BeerItem beer) {
 
-        /*
-        BeerDAOImpl beerBoxDao = new BeerDAOImpl();
+        BeerDAOImpl beerDao = new BeerDAOImpl();
 
-        int id = PersonaInfoService.savePersona(persona);
-        return persona;
-
-         */
-
+        int id = beerDao.save(beer);
+        beer.setId(id);
         return beer;
+
     }
 
 }

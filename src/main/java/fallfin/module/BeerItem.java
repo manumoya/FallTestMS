@@ -7,16 +7,18 @@ public class BeerItem {
     private String country;
     private Double price;
     private String currency;
-    private BeerBox beerBox;
+    private final Integer quantity = 6;
 
-    public BeerItem(Integer id, String name, String brewery, String country, Double price, String currency, BeerBox beerBox){
+    public BeerItem(){
+    }
+
+    public BeerItem(Integer id, String name, String brewery, String country, Double price, String currency){
         setId(id);
         setName(name);
         setBrewery(brewery);
         setCountry(country);
         setPrice(price);
         setCurrency(currency);
-        setBeerBox(beerBox);
     }
 
     public Integer getId() {
@@ -67,11 +69,8 @@ public class BeerItem {
         this.currency = currency;
     }
 
-    public BeerBox getBeerBox() {
-        return beerBox;
+    public Integer getQuantity() {
+        return quantity;
     }
 
-    public void setBeerBox(BeerBox beerBox) {
-        this.beerBox = beerBox;
-    }
 }

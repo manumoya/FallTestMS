@@ -4,6 +4,9 @@ public class BeerBox {
 
     private Double priceTotal;
 
+    public BeerBox(){
+    }
+
     public BeerBox( Double priceTotal){
         setPriceTotal(priceTotal);
     }
