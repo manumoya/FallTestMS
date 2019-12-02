@@ -1,20 +1,11 @@
 package fallfin.module;
 
 public class BeerBox {
-    private BeerItem beerItem;
+
     private Double priceTotal;
 
-    public BeerBox(BeerItem beerItem, Double priceTotal){
-        setBeerItem(beerItem);
+    public BeerBox( Double priceTotal){
         setPriceTotal(priceTotal);
-    }
-
-    public BeerItem getBeerItem() {
-        return beerItem;
-    }
-
-    public void setBeerItem(BeerItem beerItem) {
-        this.beerItem = beerItem;
     }
 
     public Double getPriceTotal() {

@@ -12,19 +12,20 @@ import static org.junit.Assert.assertEquals;
 public class BeerBoxDAOTest {
     @Test
     public void findAll() {
-        BeerBoxDAO beerBoxDao = new BeerBoxDAO();
-        List<BeerBox> list = beerBoxDao.findAll();
+        BeerBoxDAOImpl beerBoxDao = new BeerBoxDAOImpl();
+        List<BeerItem> list = beerBoxDao.findAll();
         assertEquals(0, list.size());
     }
 
     @Test
     public void save() {
-        BeerItem beer = new BeerItem(0, "pilsen", "ARTOR", "Chile", 1000.00, "CLP");
-        BeerBox beerBox = new BeerBox(beer, 3000.00);
 
-        BeerBoxDAO beerBoxDao = new BeerBoxDAO();
-        beerBoxDao.save(beerBox);
-        List<BeerBox> beers = beerBoxDao.findAll();
+        BeerBox beerBox = new BeerBox(3000.00);
+        BeerItem beer = new BeerItem(0, "pilsen", "ARTOR", "Chile", 1000.00, "CLP", beerBox);
+
+        BeerBoxDAOImpl beerBoxDao = new BeerBoxDAOImpl();
+        beerBoxDao.save(beer);
+        List<BeerItem> beers = beerBoxDao.findAll();
         assertEquals(1,beers.size());
 
 
