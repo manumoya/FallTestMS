@@ -29,11 +29,5 @@ public class BeerBoxDAOTest {
         assertEquals(1,beers.size());
 
 
-        /*
-        int id = PersonaInfoDAO.save(persona);
-
-        List<Persona> list2 = PersonaInfoDAO.findAll();
-        assertEquals(1,list2.size());
-        */
     }
 }
