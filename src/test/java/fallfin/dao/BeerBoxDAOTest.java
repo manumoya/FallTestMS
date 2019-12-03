@@ -19,8 +19,8 @@ public class BeerBoxDAOTest {
     @Test
     public void save() {
 
-        BeerItem beer = new BeerItem(0, "pilsen", "ARTOR", "Chile", 1000.00, "CLP");
-        BeerItem beer2 = new BeerItem(0, "pilsen2", "ARTOR2", "Chile2", 1000.00, "CLP");
+        BeerItem beer = new BeerItem(1, "pilsen", "ARTOR", "Chile", 1000.00, "CLP");
+        BeerItem beer2 = new BeerItem(2, "pilsen2", "ARTOR2", "Chile2", 1000.00, "CLP");
 
         //BeerDAO beerDao;
         BeerDAO.save(beer);

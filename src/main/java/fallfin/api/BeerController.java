@@ -24,7 +24,7 @@ public class BeerController {
     public ResponseEntity<BeerItem> addBeers(@RequestBody BeerItem beer) {
 
         int id = BeerDAO.save(beer);
-        beer.setId(id);
+        //beer.setId(id);
         //return beer;
         return new ResponseEntity<BeerItem>(beer, HttpStatus.CREATED);
 

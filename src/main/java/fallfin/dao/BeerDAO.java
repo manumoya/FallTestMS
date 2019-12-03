@@ -17,10 +17,10 @@ public class BeerDAO {
 
     /* graba una cerveza */
     public static Integer save (BeerItem beer){
-        Integer id = findAll().size()+1;
-        beer.setId(id);
+        //Integer id = findAll().size()+1;
+        //beer.setId(id);
         beers.add(beer);
-        return id;
+        return beer.getId();
     }
 
 }
