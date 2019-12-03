@@ -49,8 +49,8 @@ Se solicita crear un API REST basándonos en la definición que se encuentra en 
 ### Supuestos
 * El valor de BeerItem es unitario, es decir, valor por botella.
 * El precio es por caja, por lo que minimo son 6 botellas o multiplos de 6. 
-	* Ej 1: Si pide 4 cervezas, el valor es por una caja (6 botellas).
-	* Ej 2: Si pide 9 cervezas, el valor es por 2 cajas (12 botellas).
+	* Ej. 1: Si pide 4 cervezas, el valor es por una caja (6 botellas).
+	* Ej. 2: Si pide 9 cervezas, el valor es por 2 cajas (12 botellas).
 ### Descripción del programa
 
 El programa considera los siguientes Packages:
@@ -210,11 +210,11 @@ Las pruebas unitarias que cubren los casos son:
 * Deploy basado en GitHub
 * Postman (request client)
 * Maven (construcción y gestión del proyecto)
-* MAC OS X 	
+* MAC OS X.
 
 ### ¿Se puede mejorar?
 
-* Agregando Swagger para la documentación e la API.
+* Agregando Swagger para la documentación de la API.
 * Profundizar en la validación de data input.
 
 
