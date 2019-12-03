@@ -40,27 +40,17 @@ public class BeerController {
 
     /* GET => Buscar Cerveza por ID */
     @GetMapping("/beers/{beerID}")
-    public ResponseEntity<String> searchBeerById(@PathVariable Integer beerID){
-        String msgOut ="El Id de la cerveza no existe";
-        HttpStatus statusHttp = HttpStatus.NOT_FOUND; // 404;
-        BeerItem beerFound = BeerDAO.get( beerID );
-
-        if(beerFound.getId() != null) {
-            msgOut ="Operacion exitosa";
-            statusHttp = HttpStatus.OK; // 200;
-
-            URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                    .path("/components/schemas/BeerItem")
-                    .buildAndExpand()
-                    .toUri();
-
-            HttpHeaders headers = new HttpHeaders();
-            headers.setLocation(location);
-
-            return new ResponseEntity<String>(msgOut, headers,  statusHttp);
+    public ResponseEntity<BeerItem> searchBeerById(@PathVariable Integer beerID){
+        try {
+            BeerItem beerFound = BeerDAO.get( beerID );
+            if(beerFound.getId() != null) { // Se encontró
+                return new ResponseEntity<BeerItem>(beerFound, HttpStatus.OK); // Code 200
+            }else{
+                return new ResponseEntity<BeerItem>(beerFound, HttpStatus.NOT_FOUND); // Code 400
+            }
+        }catch( Exception e){
+            return new ResponseEntity<BeerItem>(new BeerItem(), HttpStatus.NOT_FOUND); // Code 400
         }
-
-        return new ResponseEntity<String>(msgOut, statusHttp);
     }
 
     /* GET => Buscar Beer Item Schema */
