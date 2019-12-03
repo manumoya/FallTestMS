@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -57,7 +58,12 @@ public class BeerController {
     /* GET => Retorna todas las cervezas */
     @GetMapping("/beers")
     public List<BeerItem> searchBeers(){
-        return BeerDAO.findAll();
+        try{
+            return BeerDAO.findAll();
+        }catch (Exception e){
+            return (List<BeerItem>) new ResponseEntity<>(new ArrayList(), HttpStatus.NOT_FOUND); // Code 400
+        }
+
     }
 
 

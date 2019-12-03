@@ -27,6 +27,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
+        </dependency>
+
         <!-- Para trabajar con los html -->
         <!-- dependency>
             <groupId>org.springframework.boot</groupId>
