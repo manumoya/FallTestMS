@@ -59,7 +59,7 @@ public class BeerController {
         try{
             return BeerDAO.findAll();
         }catch (Exception e){
-            return (List<BeerItem>) new ResponseEntity<>(new ArrayList(), HttpStatus.NOT_FOUND); // Code 400
+            return (List<BeerItem>) new ResponseEntity<>(new ArrayList(), HttpStatus.BAD_REQUEST); // Code 400
         }
 
     }
