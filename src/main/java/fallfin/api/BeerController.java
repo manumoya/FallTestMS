@@ -23,21 +23,19 @@ public class BeerController {
     /* POST => Ingresa una nueva cerveza */
     @PostMapping("/beers")
     public ResponseEntity<String> addBeers(@RequestBody BeerItem beer) {
-        String msgOut ="Request inválida";
-        HttpStatus statusHttp = HttpStatus.BAD_REQUEST; // 400;
 
-        BeerItem beerFound = BeerDAO.get( beer.getId() );
-
-        if (beerFound.getId() == null){ // Cerveza ID  no encontrada, graba cerveza
-            int id = BeerDAO.save(beer);
-            msgOut ="Cerveza creada";
-            statusHttp = HttpStatus.CREATED; // 201
-        }else{ // Grabar Cerveza
-            msgOut ="El ID "+ beer.getId() +" de la cerveza ya existe";
-            statusHttp = HttpStatus.CONFLICT; //409
+        try {
+            BeerItem beerFound = BeerDAO.get( beer.getId() );
+            if (beerFound.getId() == null){ // Cerveza creada
+                int id = BeerDAO.save(beer);
+                return new ResponseEntity<String>("Cerveza creada", HttpStatus.CREATED); // Code 201
+            }else{ // La cerveza ya existe
+                return new ResponseEntity<String>("El ID "+ beer.getId() +" de la cerveza ya existe", HttpStatus.CONFLICT); // Code 409
+            }
+        }catch(Exception e){
+            return new ResponseEntity<String>("Request inválida", HttpStatus.BAD_REQUEST); // Code 400
         }
 
-        return new ResponseEntity<String>(msgOut, statusHttp);
     }
 
     /* GET => Buscar Cerveza por ID */
