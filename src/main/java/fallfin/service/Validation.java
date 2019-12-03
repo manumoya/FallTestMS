@@ -6,6 +6,11 @@ public class Validation {
     public static Integer getQuantityBeerOK(Integer quantity){
 
         Integer mod6 = quantity % 6;
-        return ( quantity + (6-mod6) );
+        if (mod6>0){
+            return ( quantity + (6-mod6) );
+        }else{
+            return quantity;
+        }
+
     }
 }
