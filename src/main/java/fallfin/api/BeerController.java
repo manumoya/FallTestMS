@@ -23,6 +23,8 @@ public class BeerController {
     @PostMapping("/beers")
     public ResponseEntity<BeerItem> addBeers(@RequestBody BeerItem beer) {
 
+        String msgOut ="Request invalida";
+
         int id = BeerDAO.save(beer);
         //beer.setId(id);
         //return beer;

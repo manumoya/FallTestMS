@@ -17,6 +17,14 @@ public class BeerBoxDAOTest {
     }
 
     @Test
+    public void get() {
+        BeerItem beer = new BeerItem(3, "pilsener", "ARTOR", "Chile", 1000.00, "CLP");
+        BeerDAO.save(beer);
+        BeerItem beerFound = BeerDAO.get(3);
+        assertEquals("pilsener", beerFound.getName());
+    }
+
+    @Test
     public void save() {
 
         BeerItem beer = new BeerItem(1, "pilsen", "ARTOR", "Chile", 1000.00, "CLP");
@@ -25,9 +33,13 @@ public class BeerBoxDAOTest {
         //BeerDAO beerDao;
         BeerDAO.save(beer);
         List<BeerItem> beers = BeerDAO.findAll();
-        assertEquals(1,beers.size());
-        BeerDAO.save(beer);
         assertEquals(2,beers.size());
+        BeerDAO.save(beer);
+        assertEquals(3,beers.size());
 
     }
+
+
+
+
 }
