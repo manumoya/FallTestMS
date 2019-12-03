@@ -9,6 +9,7 @@ import java.text.DecimalFormat;
 
 public class ConsumeRestCurrencyMock {
 
+    /* Convierte valor a la moneda de compra -Mock Object- */
     public static BigDecimal convertCurrency(String currBeerCode, String currBuyCode, Double monto) {
 
         /*
