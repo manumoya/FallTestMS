@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 public class BeerController {
@@ -53,6 +54,11 @@ public class BeerController {
         }
     }
 
+    /* GET => Retorna todas las cervezas */
+    @GetMapping("/beers")
+    public List<BeerItem> searchBeers(){
+        return BeerDAO.findAll();
+    }
 
 
 }
