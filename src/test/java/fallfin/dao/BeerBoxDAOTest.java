@@ -1,6 +1,6 @@
 package fallfin.dao;
 
-import fallfin.module.BeerItem;
+import fallfin.model.BeerItem;
 import org.junit.Test;
 
 import java.util.List;

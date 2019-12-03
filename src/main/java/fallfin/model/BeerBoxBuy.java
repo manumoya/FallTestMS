@@ -1,4 +1,4 @@
-package fallfin.module;
+package fallfin.model;
 
 public class BeerBoxBuy {
 

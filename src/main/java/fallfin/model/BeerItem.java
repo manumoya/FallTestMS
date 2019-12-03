@@ -1,4 +1,4 @@
-package fallfin.module;
+package fallfin.model;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -12,7 +12,6 @@ public class BeerItem {
 
     private String brewery;
     private String country;
-
     private Double price;
 
     @Size(min=3, max=3, message="currency: debe ser de 3 caracteres")

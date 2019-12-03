@@ -1,9 +1,9 @@
 package fallfin.api;
 
 import fallfin.dao.BeerDAO;
-import fallfin.module.BeerBox;
-import fallfin.module.BeerBoxBuy;
-import fallfin.module.BeerItem;
+import fallfin.model.BeerBox;
+import fallfin.model.BeerBoxBuy;
+import fallfin.model.BeerItem;
 import fallfin.service.ConsumeRestCurrencyMock;
 import fallfin.service.Validation;
 import org.springframework.http.HttpStatus;
