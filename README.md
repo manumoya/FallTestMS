@@ -53,11 +53,11 @@ El programa considera los siguientes Packages:
 Los programas son los siguientes:
 
 * **fallfin**: 
-	* [BeerController.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/BeerMain.java): Clase maain para ejecutar aplicación
+	* [BeerController.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/BeerMain.java): Clase main para ejecutar aplicación
 
 * **fallfin.api**: 
-	* [BeerController.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/api/BeerController.java): Controler Beer Api
-	* [BeerBoxController.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/api/BeerBoxController.java): Controler Beer BOX Api
+	* [BeerController.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/api/BeerController.java): Controller Beer Api
+	* [BeerBoxController.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/api/BeerBoxController.java): Controller Beer Box Api
 	
 * **fallfin.dao**: 
 	* [PersonaInfoDAO.java](https://github.com/manumoya/FallTestMS/tree/master/src/main/java/fallfin/dao/BeerDAO.java): Persistencia de información
@@ -82,16 +82,14 @@ Las pruebas unitarias que cubren los casos son:
 	* [ConsumeRestCurrencyTest.java](https://github.com/manumoya/FallTestMS/tree/master/src/test/java/fallfin/service/service/ConsumeRestCurrencyTest.java)
 	* [ValidationTest.java](https://github.com/manumoya/FallTestMS/tree/master/src/test/java/fallfin/service/service/ValidationTest.java)
 
-Adicionalmente, las API se probaron directamente con Postman.
-
-
+### Pruebas automáticas con POSTMAN
 
 
 * GET to http://localhost:8080/beers/
 	
 	(Lista todas las cervezas)		
 	
-	Body response:
+	**Body response**:
 
 	[
     {
@@ -104,7 +102,7 @@ Adicionalmente, las API se probaron directamente con Postman.
     }
 	]
 	
-	Status responde:
+	**Status response**:
 
 	OK: 200 / Erro: 404	
 
