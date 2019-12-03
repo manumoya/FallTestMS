@@ -4,10 +4,12 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.*;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 
 public class ConsumeRestCurrencyMock {
 
-    public static Double convertCurrency(String currBeerCode, String currBuyCode, Double monto) {
+    public static BigDecimal convertCurrency(String currBeerCode, String currBuyCode, Double monto) {
 
         /*
         String uri =  "http://www.apilayer.net/api/convert?" +
@@ -30,8 +32,14 @@ public class ConsumeRestCurrencyMock {
 
         Double dolar = 819.0;
 
-        System.out.println(monto * dolar);
-        return monto * dolar;
+        /* Formate numero */
+        DecimalFormat df = new DecimalFormat("#######0.##");
+        System.out.println(df.format(monto * dolar));
+
+        /* genera valor final */
+        BigDecimal montoFinal  = new BigDecimal(df.format(monto * dolar));
+
+        return ( montoFinal );
 
 
 

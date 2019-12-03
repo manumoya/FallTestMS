@@ -1,21 +1,23 @@
 package fallfin.module;
 
+import java.math.BigDecimal;
+
 public class BeerBox {
 
-    private Double priceTotal;
+    private BigDecimal priceTotal;
 
     public BeerBox(){
     }
 
-    public BeerBox( Double priceTotal){
+    public BeerBox( BigDecimal priceTotal){
         setPriceTotal(priceTotal);
     }
 
-    public Double getPriceTotal() {
+    public BigDecimal getPriceTotal() {
         return priceTotal;
     }
 
-    public void setPriceTotal(Double priceTotal) {
+    public void setPriceTotal(BigDecimal priceTotal) {
         this.priceTotal = priceTotal;
     }
 }
