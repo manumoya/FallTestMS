@@ -19,7 +19,12 @@ public class BeerBoxController {
     public ResponseEntity<BeerBox> searchBeerById(@PathVariable Integer beerID, @RequestBody BeerBoxBuy beerBoxBuy){
         try {
             BeerItem beerFound = BeerDAO.get( beerID );
+
+
             BeerBox beerBox = new BeerBox(1243.89);
+
+
+
             if(beerFound.getId() != null) { // Se encontró
                 return new ResponseEntity<BeerBox>(beerBox, HttpStatus.OK); // Code 200
             }else{
