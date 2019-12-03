@@ -1,11 +1,21 @@
 package fallfin.module;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class BeerItem {
     private Integer id;
+
+    @NotNull(message="Name: es obligatorio")
+    @Size(min=2, message="Name: debe se de al menos en 2 caracteres")
     private String name;
+
     private String brewery;
     private String country;
+
     private Double price;
+
+    @Size(min=3, max=3, message="currency: debe ser de 3 caracteres")
     private String currency;
 
     public BeerItem(){
