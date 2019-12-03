@@ -52,19 +52,7 @@ public class BeerController {
             return new ResponseEntity<BeerItem>(new BeerItem(), HttpStatus.NOT_FOUND); // Code 400
         }
     }
-
-    /* GET => Buscar Beer Item Schema */
-    @GetMapping("/beers/{beerID}/components/schemas/BeerItem")
-    public BeerItem getBeerItemSchema(@PathVariable Integer beerID){
-
-        BeerItem beerFound = BeerDAO.get( beerID );
-
-        if(beerFound.getId() == null) {
-            throw new RuntimeException("Cerveza ID no encontrada - " + beerID);
-        }
-
-        return beerFound;
-    }
+    
 
 
 }
