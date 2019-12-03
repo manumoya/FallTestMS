@@ -2,13 +2,10 @@ package fallfin.api;
 
 import fallfin.dao.BeerDAO;
 import fallfin.module.BeerItem;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,10 +45,10 @@ public class BeerController {
             if(beerFound.getId() != null) { // Se encontró
                 return new ResponseEntity<BeerItem>(beerFound, HttpStatus.OK); // Code 200
             }else{
-                return new ResponseEntity<BeerItem>(beerFound, HttpStatus.NOT_FOUND); // Code 400
+                return new ResponseEntity<BeerItem>(beerFound, HttpStatus.NOT_FOUND); // Code 404
             }
         }catch( Exception e){
-            return new ResponseEntity<BeerItem>(new BeerItem(), HttpStatus.NOT_FOUND); // Code 400
+            return new ResponseEntity<BeerItem>(new BeerItem(), HttpStatus.BAD_REQUEST); // Code 400
         }
     }
 
