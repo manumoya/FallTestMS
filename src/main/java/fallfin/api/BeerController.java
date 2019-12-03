@@ -52,7 +52,7 @@ public class BeerController {
             return new ResponseEntity<BeerItem>(new BeerItem(), HttpStatus.NOT_FOUND); // Code 400
         }
     }
-    
+
 
 
 }
