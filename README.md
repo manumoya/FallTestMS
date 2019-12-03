@@ -104,12 +104,43 @@ Las pruebas unitarias que cubren los casos son:
 	
 	**Status response**:
 
-	OK: 200 / Erro: 404	
+	200: OK 
 
+	404: Error	
 
+* POST to http://localhost:8080/beers/
+	
+	(Ingresa una nueva cerveza)		
+	
+	**Body request**:
 
+	[
+    {
+        "id": 2,
+        "name": "pilsen2",
+        "brewery": "cristal2",
+        "country": "Chile2",
+        "price": 1000.0,
+        "currency": "CLP"
+    }
+	]
 
- 
+	**Body response**:
+
+	* Cerveza creada
+
+ 	* El ID 1 de la cerveza ya existe
+	
+	* Request inválida
+	
+	**Status response**:
+
+	* 201: Cerveza creada
+
+ 	* 409: El ID 1 de la cerveza ya existe
+	
+	* 400: Request inválida
+
 ### Tecnología utilizada
 * java 7.*
 * SpringBoot
