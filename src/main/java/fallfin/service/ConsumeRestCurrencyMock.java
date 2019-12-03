@@ -7,11 +7,6 @@ import java.io.*;
 
 public class ConsumeRestCurrencyMock {
 
-    /*
-    public ConsumeRestCurrency() {
-    }
-    */
-
     public static Double convertCurrency(String currBeerCode, String currBuyCode, Double monto) {
 
         /*
