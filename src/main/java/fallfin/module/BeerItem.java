@@ -7,7 +7,6 @@ public class BeerItem {
     private String country;
     private Double price;
     private String currency;
-    private final Integer quantity = 6;
 
     public BeerItem(){
     }
@@ -68,9 +67,4 @@ public class BeerItem {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
 }
