@@ -24,7 +24,7 @@ public class BeerDAO {
     }
 
     /* Obtener una cerveza según ID */
-    public  static BeerItem get(Integer idBeer){
+    public static BeerItem get(Integer idBeer){
         BeerItem beerFound = new BeerItem();
         for (BeerItem beerItem : beers) {
             if (idBeer == beerItem.getId()) {
