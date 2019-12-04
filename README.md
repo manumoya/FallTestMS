@@ -39,7 +39,8 @@ Se solicita crear un API REST basándonos en la definición que se encuentra en 
 * Se creará una Api para beer item y otra para beer box.
 
 ### Supuestos
-* No hay supuestos adicionales
+* El precio es por caja, por lo que minimo son 6 cajas y multiplos de 6. 
+	* Ej: Si pide 4 cervezas, el valor es por una caja de 6.
 
 ### Descripción del programa
 
@@ -161,6 +162,31 @@ Las pruebas unitarias que cubren los casos son:
 	* 201: Operación exitosa
 
 	* 404: El Id de la cerveza no existe
+
+* GET to http://localhost:8080/beers/{beerID}/boxprice
+	
+	(Lista el precio de una caja de cervezas de una marca)	
+	
+	**Body request**:
+	
+	{
+		"currency": "USD",
+		"quantity": 134323
+	}
+
+	**Body response**:
+
+	{
+    "priceTotal": 110014632000
+	}
+	
+	**Status response**:
+
+	* 200: Operación exitosa
+
+	* 404: El Id de la cerveza no existe
+
+	* 400: Error
 
 ### Tecnología utilizada
 * java 7.*
