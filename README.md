@@ -23,13 +23,20 @@ Se solicita crear un API REST basándonos en la definición que se encuentra en 
 	* Currency: Tipo de moneda con la que desea pagar, para este caso se recomienda que utilice esta API https://currencylayer.com/
 
 
-### Entregables
+### Requisitos
 
 * Puede usar alguno de los siguientes lenguajes Java, NodeJS, Go o Python. Aunque valoramos el uso de GO.
 * Usar Docker y Docker Compose para los diferentes servicios.
 * Se puede usar librarías externas y frameworks
 * Requisito un 70% de cobertura de código
 * Completa libertad para agregar nuevas funcionalidades.
+
+### Entregables
+
+* Api funcionando y programada en Java (Spring Boot).
+* Configuración mave para librerias externas.
+* Pruebas unitarias y basdas en POSTMAN, para cubrir 70% de cobertura de código.
+* Documentación de API (Readme).
 
 ### Idea principal
 
