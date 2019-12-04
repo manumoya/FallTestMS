@@ -33,10 +33,11 @@ Se solicita crear un API REST basándonos en la definición que se encuentra en 
 
 ### Idea principal
 
-* Realizar la api usando las opciones que entrega http.
+* Realizar la api usando Spring Boot.
 * Crear modelos, DAO y servicios para gestionar información.
-* Se usará un objeto estatico (List) que simulará la persistencia 
+* Se usará un objeto estático (List) que simulará la persistencia.
 * Se creará un controller para beer item y otro para beer box.
+* Los modelos serán los requeridos en el archivo [openapi.yaml](https://bitbucket.org/lgaetecl/microservices-test/src/master/openapi.yaml)
 
 ### Supuestos
 * El valor de BeerItem es unitario, es decir, valor por botella.
