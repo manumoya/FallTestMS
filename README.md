@@ -82,7 +82,7 @@ Las pruebas unitarias que cubren los casos son:
 	* [ConsumeRestCurrencyTest.java](https://github.com/manumoya/FallTestMS/tree/master/src/test/java/fallfin/service/service/ConsumeRestCurrencyTest.java)
 	* [ValidationTest.java](https://github.com/manumoya/FallTestMS/tree/master/src/test/java/fallfin/service/service/ValidationTest.java)
 
-### Pruebas automáticas con POSTMAN
+### Pruebas con POSTMAN
 
 
 * GET to http://localhost:8080/beers/
@@ -104,9 +104,9 @@ Las pruebas unitarias que cubren los casos son:
 	
 	**Status response**:
 
-	200: OK 
+	* 200: OK 
 
-	404: Error	
+	* 404: Error	
 
 * POST to http://localhost:8080/beers/
 	
@@ -140,6 +140,27 @@ Las pruebas unitarias que cubren los casos son:
  	* 409: El ID 1 de la cerveza ya existe
 	
 	* 400: Request inválida
+
+* GET to http://localhost:8080/beers/{beerID}
+	
+	(Lista detalle de una cerveza)	
+
+	**Body response**:
+
+	{
+   		"id": 1,
+       "name": "pilsen",
+       "brewery": "cristal",
+       "country": "Chile",
+       "price": 10.0,
+       "currency": “USD”
+   }
+	
+	**Status response**:
+
+	* 201: Operación exitosa
+
+	* 404: El Id de la cerveza no existe
 
 ### Tecnología utilizada
 * java 7.*
