@@ -190,6 +190,12 @@ Las pruebas unitarias que cubren los casos son:
 
 	* 400: Error
 
+* Consideraciones:
+
+	Header debe ser configurado con:
+	
+	* Content-Type = application/json
+
 ### Tecnología utilizada
 * java 7.*
 * SpringBoot
@@ -201,6 +207,7 @@ Las pruebas unitarias que cubren los casos son:
 
 ### ¿Se puede mejorar?
 
-* ….
+* Agregando Swagger para la documentación e la API.
+* Profundizar en la validación de data input.
 
 
