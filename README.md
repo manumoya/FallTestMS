@@ -36,12 +36,13 @@ Se solicita crear un API REST basándonos en la definición que se encuentra en 
 * Realizar la api usando las opciones que entrega http.
 * Crear modelos, DAO y servicios para gestionar información.
 * Se usará un objeto estatico (List) que simulará la persistencia 
-* Se creará una Api para beer item y otra para beer box.
+* Se creará un controller para beer item y otro para beer box.
 
 ### Supuestos
-* El precio es por caja, por lo que minimo son 6 cajas y multiplos de 6. 
-	* Ej: Si pide 4 cervezas, el valor es por una caja de 6.
-
+* El valor de BeerItem es unitario, es decir, valor por botella.
+* El precio es por caja, por lo que minimo son 6 botellas o multiplos de 6. 
+	* Ej 1: Si pide 4 cervezas, el valor es por una caja (6 botellas).
+	* Ej 2: Si pide 9 cervezas, el valor es por 2 cajas (12 botellas).
 ### Descripción del programa
 
 El programa considera los siguientes Packages:
