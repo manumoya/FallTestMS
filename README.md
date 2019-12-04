@@ -140,7 +140,7 @@ Las pruebas unitarias que cubren los casos son:
 
 	* 201: Cerveza creada
 
- 	* 409: El ID 1 de la cerveza ya existe
+ 	* 409: El ID {id} de la cerveza ya existe
 	
 	* 400: Request inválida
 
